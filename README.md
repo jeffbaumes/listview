@@ -3,7 +3,7 @@ List View Tangelo App
 
 1. Clone this repository.
 ```
-git clone 
+git clone https://github.com/jeffbaumes/listview.git
 ```
 2. Install [Tangelo](http://kitware.github.io/tangelo/).
 3. Install [MongoDB](http://mongodb.org).
