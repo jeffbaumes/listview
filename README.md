@@ -31,4 +31,4 @@ Add a link into Tangelo for this app
 ln -s /path/to/listview /path/to/tangelo-build/deploy/web/listview
 ```
 
-Now visit http://localhost:8080/listview/ to view the app.
+Now visit [http://localhost:8080/listview/](http://localhost:8080/listview/) to view the app.
