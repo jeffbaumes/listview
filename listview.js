@@ -119,7 +119,7 @@
             attributes.push(attribute);
 
             attribute.element = d3.select("#list-view").append("div")
-                .attr("class", "column span2");
+                .attr("class", "column col-sm-2");
 
             attribute.element.append("h4")
                 .text(name);
@@ -132,13 +132,13 @@
 
             var group = attribute.element.append("div")
                 .attr("class", "btn-group")
-                .attr("data-toggle", "buttons-radio")
+                .attr("data-toggle", "buttons")
                 .selectAll("div.btn")
                 .data(sortTypes)
                 .enter().append("div")
-                .attr("class", "btn btn-mini")
+                .attr("class", "btn btn-xs btn-primary")
                 .classed("active", function (d) { return d.name === "count"; })
-                .text(function (d) { return d.name; })
+                .html(function (d) { return '<input type=radio name=mode> ' + d.name; })
                 .on("click", function (d) {
                     changeSort(attribute.index, d.field, d.direction);
                 });
@@ -151,10 +151,16 @@
             .data(names.result)
             .enter().append("option")
             .text(function (d) { return d; });
+
+        // Preload some attributes.
+        addAttribute('year');
+        addAttribute('authors');
+        addAttribute('concepts');
     });
 
     d3.select("#add").on("click", function () {
         addAttribute($("#select-attribute").val());
     });
+
 
 }());

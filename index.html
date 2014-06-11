@@ -5,7 +5,6 @@
     <script src=http://code.jquery.com/jquery-1.9.1.min.js></script>
     <script src=http://d3js.org/d3.v3.min.js charset=utf-8></script>
     <script src=/js/tangelo.min.js></script>
-    <script src="listview.js"></script>
 
     <link href=http://bootswatch.com/cosmo/bootstrap.min.css rel=stylesheet>
     <link href=//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css rel=stylesheet>
@@ -13,14 +12,23 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="span12">
+            <div class="col-sm-12">
                 <h2>List View</h2>
+                <p>
+                    Select IEEE InfoVis paper attributes to add to the list view below.
+                    Click on an attribute value to select papers with those attributes,
+                    and portions of corresponding attributes will highlight in other columns.
+                    You may sort each column in alphabetical order, by the number of papers
+                    with that attribute value, or by the number of selected papers with
+                    that value.
+                </p>
                 <div class="form-inline">
-                    <select id="select-attribute"></select>
-                    <div id="add" class="btn">add attribute</div>
+                    <select id="select-attribute" class="form-control"></select>
+                    <div id="add" class="btn btn-primary">add attribute</div>
                 </div>
             </div>
         </div>
         <div id="list-view" class="row"></div>
     </div>
+    <script src="listview.js"></script>
 </body>
